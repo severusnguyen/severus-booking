@@ -1,36 +1,11 @@
-package severusnguyen.severusbooking.entity;
+package severusnguyen.severusbooking.dto;
 
-import jakarta.persistence.*;
-
-@Entity(name = "event")
-public class Event {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "title")
+public class EventDTO {
     private String title;
-
-    @Column(name = "price")
-    private double price;
-
-    @Column(name = "subtitle")
     private String subtitle;
-
-    @Column(name = "description")
+    private double price;
     private String description;
-
-    @Column(name = "image")
     private String image;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;
@@ -40,20 +15,20 @@ public class Event {
         this.title = title;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public String getSubtitle() {
         return subtitle;
     }
 
     public void setSubtitle(String subtitle) {
         this.subtitle = subtitle;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public String getDescription() {

@@ -8,4 +8,11 @@ spring:
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.MySQL8Dialect
+  servlet:
+    multipart:
+      max-file-size: 100MB
+
+fileUpload:
+  rootPath: C:\Users\ADMIN\Desktop\upload
+#  đường dẫn mình sẽ lưu file
 

@@ -1,44 +1,15 @@
-package severusnguyen.severusbooking.entity;
-
-import jakarta.persistence.*;
+package severusnguyen.severusbooking.dto;
 
 import java.util.Date;
 
-@Entity(name = "book_table")
-public class BookTable {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "guest_name")
+public class BookTableDTO {
     private String guestName;
-
-    @Column(name = "email")
     private String email;
-
-    @Column(name = "phone")
     private String phone;
-
-    @Column(name = "date_book")
     private Date dateBook;
-
-    @Column(name = "time_book")
     private Date timeBook;
-
-    @Column(name = "amount_of_people")
     private int amountOfPeople;
-
-    @Column(name = "message")
-    private String message;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private String massage;
 
     public String getGuestName() {
         return guestName;
@@ -88,11 +59,11 @@ public class BookTable {
         this.amountOfPeople = amountOfPeople;
     }
 
-    public String getMessage() {
-        return message;
+    public String getMassage() {
+        return massage;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setMassage(String massage) {
+        this.massage = massage;
     }
 }
