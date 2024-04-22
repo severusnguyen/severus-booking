@@ -50,7 +50,6 @@ public class MenuController {
     @GetMapping("file/{filename:.+}")
     public ResponseEntity<?> getFileMenu(@PathVariable String filename){ //download file
 
-        ResponseData responseData = new ResponseData();
         Resource resource = fileServiceImp.loadFile(filename);
 
         return ResponseEntity.ok()

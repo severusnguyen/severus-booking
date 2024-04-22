@@ -1,33 +1,10 @@
-package severusnguyen.severusbooking.entity;
+package severusnguyen.severusbooking.dto;
 
-import jakarta.persistence.*;
-
-@Entity(name = "comment")
-public class Comment {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Column(name = "name")
-    private String name;
-
-    @Column(name = "subject")
+public class CommentDTO {
+    private  String name;
     private String subject;
-
-    @Column(name = "message")
     private String message;
-
-    @Column(name = "image")
     private String image;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
